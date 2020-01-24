@@ -1,7 +1,7 @@
 import hatebase_extract
 import write_gazetteer
 
-path = '/home/claclab/Documents/Claire/python_scripts/hatebase/get_vocabulary'
+path = '/get_vocabulary'
 output_file = 'hatebase_eng.lst'
 
 # See docs for extraction parameter options and field descriptions 
@@ -22,5 +22,5 @@ fields_to_write = ['is_unambiguous',
                    'hateful_meaning']
 
 if __name__ == "__main__":
-    hatebase_extract.get_vocabulary(path, extract_params)
+    #hatebase_extract.get_vocabulary(path, extract_params)
     write_gazetteer.write(path, fields_to_write, output_file)
