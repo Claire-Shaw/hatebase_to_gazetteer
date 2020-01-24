@@ -3,9 +3,15 @@ import config
 import requests
 import json
 import os
+import glob
 
 def get_vocabulary(path, extract_params={}):
-
+    # Clear all files in directory
+    existing_files = glob.glob(path+'/*.txt')
+    for f in existing_files:
+        if os.path.isfile(f):
+            os.remove(f)
+    
     auth_params = {
         'api_key': config.api_key
     }
